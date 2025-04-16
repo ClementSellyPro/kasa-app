@@ -1,0 +1,27 @@
+.cardList {
+  padding: 40px 100px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+    padding: 55px;
+    border-radius: 25px;
+    background-color: #f6f6f6;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardList {
+    padding: 0px 20px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding: 20px 0;
+      border-radius: 25px;
+      background-color: transparent;
+    }
+  }
+}
