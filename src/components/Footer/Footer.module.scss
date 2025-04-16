@@ -1,2 +1,27 @@
-.container {
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 60px;
+  background-color: black;
+  color: white;
+
+  &__text {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    gap: 0px;
+    padding: 60px 0;
+
+    &__text {
+      font-size: 12px;
+      width: 100px;
+    }
+  }
 }
