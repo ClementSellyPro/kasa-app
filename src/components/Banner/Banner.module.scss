@@ -1,0 +1,49 @@
+.banner {
+  padding: 25px 100px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 223px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: black;
+
+    &__image {
+      width: 100%;
+      opacity: 0.5;
+      object-fit: contain;
+    }
+
+    &__title {
+      position: absolute;
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 15px 20px;
+
+    &__container {
+      height: 111px;
+      border-radius: 10px;
+
+      &__image {
+        object-fit: cover;
+      }
+
+      &__title {
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        width: 90%;
+      }
+    }
+  }
+}

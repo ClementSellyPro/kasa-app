@@ -3,9 +3,18 @@
   gap: 57px;
   font-weight: 500;
   font-size: 24px;
+  list-style: none;
+
+  @media (max-width: 768px) {
+    gap: 26px;
+    font-size: 17px;
+  }
 }
 .navbar__links__link_item {
   text-decoration: none;
-  list-style: none;
   color: black;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
