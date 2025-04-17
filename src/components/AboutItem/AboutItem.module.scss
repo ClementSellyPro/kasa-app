@@ -21,8 +21,18 @@
 
   &__text {
     margin: 0;
+    padding: 0px;
+    opacity: 0;
+    height: 0px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__text_open {
+    margin: 0;
     padding: 30px;
     border-radius: 5px;
+    height: fit-content;
+    opacity: 1;
     background-color: #f6f6f6;
   }
 }
