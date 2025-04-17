@@ -1,17 +1,15 @@
 import styles from "./Banner.module.scss";
 
-export default function Banner() {
+export default function Banner({ imgURL, imgAlt, children }) {
   return (
     <div className={styles.banner}>
       <div className={styles.banner__container}>
         <img
           className={styles.banner__container__image}
-          src={"/assets/images/home-image.png"}
-          alt={"Bord de mer"}
+          src={imgURL}
+          alt={imgAlt}
         />
-        <h1 className={styles.banner__container__title}>
-          <span>Chez vous,</span> <span>partout et ailleurs</span>
-        </h1>
+        {children}
       </div>
     </div>
   );

@@ -1,0 +1,11 @@
+.aboutItemList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 200px;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+    padding: 20px 20px;
+  }
+}

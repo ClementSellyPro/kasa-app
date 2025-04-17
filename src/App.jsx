@@ -1,4 +1,4 @@
-import { Outlet, Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import "./App.scss";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,13 +10,14 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
+      <main>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
 
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      {/* <Outlet /> */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );

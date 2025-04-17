@@ -1,0 +1,28 @@
+.aboutItem {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #ff6060;
+    color: #fff;
+
+    &__title {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    &__icon {
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+  }
+}
