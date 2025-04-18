@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Card from "../Card/Card";
 import styles from "./CardList.module.scss";
 
@@ -7,7 +8,9 @@ export default function CardList() {
       <section className={styles.cardList__container}>
         <Card />
         <Card />
-        <Card />
+        <Link to={"/fiche"}>
+          <Card />
+        </Link>
         <Card />
       </section>
     </div>

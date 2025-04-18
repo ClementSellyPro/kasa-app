@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import AboutItem from "../AboutItem/AboutItem";
 import styles from "./AboutItemList.module.scss";
+import Collapse from "../Collapse/Collapse";
 
 export default function AboutItemList() {
   const [aboutData, setAboutData] = useState([]);
@@ -12,8 +12,8 @@ export default function AboutItemList() {
   }, []);
   return (
     <div className={styles.aboutItemList}>
-      {aboutData.map((item) => (
-        <AboutItem title={item.title} text={item.text} />
+      {aboutData.map((item, index) => (
+        <Collapse key={index} title={item.title} text={item.text} />
       ))}
     </div>
   );

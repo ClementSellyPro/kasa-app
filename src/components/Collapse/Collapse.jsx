@@ -1,7 +1,7 @@
 import { useState } from "react";
-import styles from "./AboutItem.module.scss";
+import styles from "./Collapse.module.scss";
 
-export default function AboutItem({ title, text }) {
+export default function Collapse({ title, text }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleClick(e) {
@@ -16,17 +16,17 @@ export default function AboutItem({ title, text }) {
   }
 
   return (
-    <div className={styles.aboutItem}>
-      <div className={styles.aboutItem__header}>
-        <h2 className={styles.aboutItem__header__title}>{title}</h2>
+    <div className={styles.collapse}>
+      <div className={styles.collapse__header}>
+        <h2 className={styles.collapse__header__title}>{title}</h2>
         <img
-          className={styles.aboutItem__header__icon}
+          className={styles.collapse__header__icon}
           src="/assets/icon/arrow.svg"
           alt="Fleche"
           onClick={(e) => handleClick(e)}
         />
       </div>
-      {isOpen ?? <p className={styles.aboutItem__text_open}>{text}</p>}
+      {isOpen && <p className={styles.collapse__text}>{text}</p>}
     </div>
   );
 }

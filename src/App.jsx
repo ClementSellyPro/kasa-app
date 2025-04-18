@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Footer from "./components/Footer/Footer";
 import NotFound from "./components/NotFound/NotFound";
 import Header from "./components/Header/Header";
+import Fiche from "./pages/Fiche";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="fiche" element={<Fiche />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

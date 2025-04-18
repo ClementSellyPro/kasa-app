@@ -1,0 +1,19 @@
+.slideshow {
+  &__img {
+    position: relative;
+    height: 430px;
+    border-radius: 25px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+
+    &__arrowLeft {
+      position: absolute;
+      left: 30px;
+      top: 40%;
+    }
+    &__arrowRight {
+      position: absolute;
+      right: 30px;
+      top: 40%;
+    }
+  }
+}
