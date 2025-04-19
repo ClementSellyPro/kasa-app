@@ -1,0 +1,11 @@
+.fiche__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fiche__description {
+  display: flex;
+  justify-content: space-between;
+  gap: 76px;
+  padding-bottom: 45px;
+}

@@ -1,5 +1,3 @@
-import styles from "./FicheRating.module.scss";
-
 export default function FicheRating({ note }) {
   let stars = [];
 
@@ -13,5 +11,5 @@ export default function FicheRating({ note }) {
     }
   }
 
-  return <div className={styles.ficheRating}>{stars}</div>;
+  return <div>{stars}</div>;
 }
