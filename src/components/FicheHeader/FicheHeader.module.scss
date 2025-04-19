@@ -1,0 +1,36 @@
+.ficheHeader {
+  padding: 30px 0;
+
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 500;
+    color: #ff6060;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 22px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 115px;
+      height: 25px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: #ff6060;
+      color: #fff;
+    }
+  }
+}

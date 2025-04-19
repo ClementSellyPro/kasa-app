@@ -12,6 +12,7 @@ export default function FicheBanner() {
           className={styles.slideshow__img__arrowRight}
           src="/assets/icon/arrow-right.svg"
         />
+        <p className={styles.slideshow__img__index}>1/4</p>
       </div>
     </div>
   );

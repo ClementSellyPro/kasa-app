@@ -1,0 +1,27 @@
+.ficheHost {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0;
+
+  &__host {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__name {
+      font-size: 18px;
+      font-weight: 500px;
+      width: 100px;
+      text-align: end;
+      color: #ff6060;
+    }
+
+    &__img {
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+      background-color: #bdbdbd;
+    }
+  }
+}
