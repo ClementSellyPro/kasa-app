@@ -1,8 +1,20 @@
 import { useState } from "react";
 import styles from "./Collapse.module.scss";
 
-export default function Collapse({ title, text }) {
+export default function Collapse({ title, text, equipements }) {
   const [isOpen, setIsOpen] = useState(false);
+  let textDisplay = "";
+  if (equipements) {
+    textDisplay = (
+      <ul className={styles.collapse__list}>
+        {equipements.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    );
+  } else {
+    textDisplay = <p className={styles.collapse__text}>{text}</p>;
+  }
 
   function handleClick(e) {
     const target = e.target;
@@ -26,7 +38,7 @@ export default function Collapse({ title, text }) {
           onClick={(e) => handleClick(e)}
         />
       </div>
-      {isOpen && <p className={styles.collapse__text}>{text}</p>}
+      {isOpen && textDisplay}
     </div>
   );
 }

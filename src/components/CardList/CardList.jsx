@@ -17,7 +17,7 @@ export default function CardList() {
       <section className={styles.cardList__container}>
         {logementData.map((item) => {
           return (
-            <Link to={`/fiche`} key={item.id}>
+            <Link to={`/fiche/${item.id}`} key={item.id}>
               <Card title={item.title} cover={item.cover} />
             </Link>
           );

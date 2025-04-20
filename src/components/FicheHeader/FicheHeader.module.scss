@@ -8,7 +8,7 @@
     color: #ff6060;
   }
 
-  &__subtitle {
+  &__location {
     margin: 0;
     margin-bottom: 22px;
     font-size: 18px;
@@ -25,6 +25,7 @@
       justify-content: center;
       align-items: center;
       min-width: 115px;
+      padding: 0 15px;
       height: 25px;
       border-radius: 10px;
       font-size: 14px;
