@@ -34,3 +34,18 @@
     transform: scale(1.1);
   }
 }
+
+@media (max-width: 768px) {
+  .card {
+    height: 255px;
+
+    &__title {
+      font-size: 18px;
+      height: 50px;
+    }
+
+    &__cover {
+      height: 255px;
+    }
+  }
+}

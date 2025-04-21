@@ -35,3 +35,30 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .ficheHeader {
+    padding-top: 12px;
+    padding-bottom: 0px;
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__location {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    &__tags {
+      flex-wrap: wrap;
+      &__item {
+        min-width: 84px;
+        height: 18px;
+        padding: 0 15px;
+        border-radius: 5px;
+        font-size: 10px;
+      }
+    }
+  }
+}

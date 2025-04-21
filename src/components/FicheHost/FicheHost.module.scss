@@ -25,3 +25,25 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .ficheHost {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 15px 0;
+
+    &__host {
+      &__name {
+        font-size: 12px;
+        width: 80px;
+      }
+
+      &__img {
+        width: 32px;
+        height: 32px;
+        border-radius: 18px;
+        background-color: #bdbdbd;
+      }
+    }
+  }
+}

@@ -35,3 +35,24 @@
     list-style: none;
   }
 }
+
+@media (max-width: 768px) {
+  .collapse {
+    &__header {
+      height: 30px;
+      padding: 5px 15px;
+      border-radius: 5px;
+      background-color: #ff6060;
+      color: #fff;
+
+      &__title {
+        font-size: 13px;
+        margin: 0;
+      }
+
+      &__icon {
+        width: 16px;
+      }
+    }
+  }
+}

@@ -37,3 +37,30 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .slideshow {
+    &__container {
+      height: 255px;
+      border-radius: 10px;
+
+      &__arrowLeft {
+        left: 18px;
+        top: 50%;
+      }
+      &__arrowRight {
+        right: 18px;
+        top: 50%;
+      }
+      &__arrowLeft,
+      &__arrowRight {
+        width: 12px;
+      }
+
+      &__index {
+        bottom: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+}

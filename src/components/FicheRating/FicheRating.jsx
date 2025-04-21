@@ -1,14 +1,26 @@
+import styles from "./FicheRating.module.scss";
+
 export default function FicheRating({ note }) {
   let stars = [];
 
   for (let i = 0; i < 5; i++) {
     if (i < note) {
       stars.push(
-        <img key={i} src="/assets/icon/star-active.svg" alt="Etoile note" />
+        <img
+          className={styles.ratingStars}
+          key={i}
+          src="/assets/icon/star-active.svg"
+          alt="Etoile note"
+        />
       );
     } else {
       stars.push(
-        <img key={i} src="/assets/icon/star-inactive.svg" alt="Etoile note" />
+        <img
+          className={styles.ratingStars}
+          key={i}
+          src="/assets/icon/star-inactive.svg"
+          alt="Etoile note"
+        />
       );
     }
   }
