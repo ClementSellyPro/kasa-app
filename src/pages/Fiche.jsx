@@ -1,4 +1,4 @@
-import { useParams, redirect } from "react-router";
+import { useParams } from "react-router";
 import Collapse from "../components/Collapse/Collapse";
 import FicheHeader from "../components/FicheHeader/FicheHeader";
 import FicheHost from "../components/FicheHost/FicheHost";
@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 export default function Fiche() {
   const { id } = useParams();
   const [logementData, setLogementData] = useState(null);
+  const [pictures, setPictures] = useState(null);
 
   useEffect(() => {
     fetch("/logements.json")
@@ -16,15 +17,16 @@ export default function Fiche() {
       .then((data) => {
         const currentLogement = data.find((item) => item.id === id);
         setLogementData(currentLogement);
+        setPictures(currentLogement.pictures);
       });
   }, [id]);
 
-  if (!logementData) return <p>Loading...</p>;
-  if (!logementData) return redirect("*");
+  if (!logementData) return <p style={{ textAlign: "center" }}>Loading...</p>;
+  // if (!logementData) return redirect("*");
 
   return (
     <>
-      <Slideshow />
+      <Slideshow pictures={pictures} />
       <div className={styles.fiche__header}>
         <FicheHeader
           title={logementData.title}

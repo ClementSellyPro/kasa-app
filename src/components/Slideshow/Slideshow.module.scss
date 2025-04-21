@@ -1,10 +1,16 @@
 .slideshow {
-  &__img {
+  &__container {
     position: relative;
+    overflow: hidden;
     height: 430px;
     border-radius: 25px;
     background-color: rgba($color: #000000, $alpha: 0.2);
     color: #fff;
+
+    &__img {
+      width: 100%;
+      object-fit: cover;
+    }
 
     &__arrowLeft {
       position: absolute;
