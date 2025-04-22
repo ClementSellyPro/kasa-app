@@ -6,14 +6,14 @@ export default function Collapse({ title, text, equipements }) {
   let textDisplay = "";
   if (equipements) {
     textDisplay = (
-      <ul className={styles.collapse__list}>
+      <ul className={isOpen ? styles.collapse__content__open : styles.collapse__content}>
         {equipements.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
     );
   } else {
-    textDisplay = <p className={styles.collapse__text}>{text}</p>;
+    textDisplay = <p className={isOpen ? styles.collapse__content__open : styles.collapse__content}>{text}</p>;
   }
 
   function handleClick(e) {
@@ -38,7 +38,7 @@ export default function Collapse({ title, text, equipements }) {
           onClick={(e) => handleClick(e)}
         />
       </div>
-      {isOpen && textDisplay}
+      {textDisplay}
     </div>
   );
 }

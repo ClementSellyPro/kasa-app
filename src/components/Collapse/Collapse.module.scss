@@ -17,22 +17,29 @@
 
     &__icon {
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.3s;
     }
   }
 
-  &__text,
-  &__list {
+  &__content {
     margin: 0;
-    padding: 0px;
     background-color: #f6f6f6;
-    padding: 30px;
     border-radius: 5px;
-    height: fit-content;
-  }
+    padding: 0 30px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
 
-  &__list {
     list-style: none;
+
+    &__open{
+      margin: 0;
+      background-color: #f6f6f6;
+      padding: 30px;
+      max-height: 200px;
+      transition: all 0.5s;
+      list-style: none;
+    }
   }
 }
 
