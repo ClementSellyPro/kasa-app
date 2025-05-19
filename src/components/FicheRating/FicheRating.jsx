@@ -4,25 +4,14 @@ export default function FicheRating({ note }) {
   let stars = [];
 
   for (let i = 0; i < 5; i++) {
-    if (i < note) {
-      stars.push(
-        <img
-          className={styles.ratingStars}
-          key={i}
-          src="/assets/icon/star-active.svg"
-          alt="Etoile note"
-        />
-      );
-    } else {
-      stars.push(
-        <img
-          className={styles.ratingStars}
-          key={i}
-          src="/assets/icon/star-inactive.svg"
-          alt="Etoile note"
-        />
-      );
-    }
+    stars.push(
+      <img
+        className={styles.ratingStars}
+        key={i}
+        src={`/assets/icon/star-${ i < note ? 'active' : 'inactive' }.svg`}
+        alt="Etoile note"
+      />
+    );
   }
 
   return <div>{stars}</div>;

@@ -5,43 +5,42 @@ import FicheHost from "../components/FicheHost/FicheHost";
 import Slideshow from "../components/Slideshow/Slideshow";
 import styles from "./Fiche.module.scss";
 import { useEffect, useState } from "react";
+import useLogement from '../context/useLogement';
 
 export default function Fiche() {
   const { id } = useParams();
-  const [logementData, setLogementData] = useState(null);
+  const [currentLogement, setCurrentLogement] = useState(null);
+  const { logementData } = useLogement();
   const [pictures, setPictures] = useState(null);
   let navigate = useNavigate();
 
   useEffect(() => {
-    fetch("/logements.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const currentLogement = data.find((item) => item.id === id);
-        if (!currentLogement) {
-          navigate("/404");
-        } else {
-          setLogementData(currentLogement);
-          setPictures(currentLogement.pictures);
-        }
-      });
+    const logement = logementData.find((item) => item.id === id);
+    if (!logement) {
+      navigate("/404");
+    } else {
+      setCurrentLogement(logement);
+      setPictures(logement.pictures);
+    }
+    //eslint-disable-next-line
   }, [id, navigate]);
 
-  if (!logementData) return <p style={{ textAlign: "center" }}>Loading...</p>;
+  if (!currentLogement) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
   return (
     <>
       <Slideshow pictures={pictures} />
       <div className={styles.fiche__header}>
         <FicheHeader
-          title={logementData.title}
-          location={logementData.location}
-          tags={logementData.tags}
+          title={currentLogement.title}
+          location={currentLogement.location}
+          tags={currentLogement.tags}
         />
-        <FicheHost host={logementData.host} rating={logementData.rating} />
+        <FicheHost host={currentLogement.host} rating={currentLogement.rating} />
       </div>
       <div className={styles.fiche__description}>
-        <Collapse title="Description" text={logementData.description} />
-        <Collapse title="Equipement" equipements={logementData.equipments} />
+        <Collapse title="Description" text={currentLogement.description} />
+        <Collapse title="Equipement" equipements={currentLogement.equipments} />
       </div>
     </>
   );

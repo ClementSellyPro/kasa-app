@@ -1,16 +1,10 @@
 import { Link } from "react-router";
 import Card from "../Card/Card";
 import styles from "./CardList.module.scss";
-import { useState, useEffect } from "react";
+import useLogement from '../../context/useLogement';
 
 export default function CardList() {
-  const [logementData, setLogementData] = useState([]);
-
-  useEffect(() => {
-    fetch("/logements.json")
-      .then((response) => response.json())
-      .then((data) => setLogementData(data));
-  }, []);
+  const { logementData } = useLogement();
 
   return (
     <div className={styles.cardList}>

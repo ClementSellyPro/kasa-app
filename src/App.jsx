@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router";
 import "./App.scss";
+import { LogementProvider } from './context/LogementContext';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/Footer/Footer";
